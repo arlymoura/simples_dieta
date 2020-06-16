@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Diet</title>
+    <title>Dieta Simples</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+<body>
 
-  <body>
-    <%= yield %>
-  </body>
+  <!-- START NAV -->
+    <%= render "layouts/partials/nav" %>
+  <!-- END NAV -->
+  <div class="container conteiner">
+      <div class="columns">
+          <div class="column is-2">
+            <!-- START Menu -->
+            
+            <!-- END Menu -->
+          </div>
+          <div class="column is-10">
+            <%= yield %>
+          </div>
+      </div>
+  </div>
+  <script async type="text/javascript" src="../js/bulma.js"></script>
+</body>
 </html>
