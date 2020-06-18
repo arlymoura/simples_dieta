@@ -1,0 +1,77 @@
+<%= form_with(model: dietary, local: true) do |form| %>
+  <% if dietary.errors.any? %>
+  <div class="columns is-mobile">
+    <div id="error_explanation" class="column is-half is-offset-one-quarter">
+        <% dietary.errors.full_messages.each do |message| %>
+        <div class="notification is-danger is-light">
+          <strong><%= message %></strong>
+        </div>
+        <% end %>
+    </div>
+  </div>
+  <% end %>
+  
+  <div class="columns">
+    <div class="column">
+      <div class="field">
+        <label class="label"><%= form.label :start_date %></label>
+        <div class="control">
+          <%= form.date_field :start_date, class: "input", placeholder: "dd/mm/YYYY" %>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="field">
+        <label class="label"><%= form.label :end_date %></label>
+        <div class="control">
+          <%= form.date_field :end_date, class: "input", placeholder: "dd/mm/YYYY" %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column">
+      <div class="field">
+        <label class="label"><%= form.label :weight %></label>
+        <div class="control">
+          <%= form.number_field :weight, class: "input", placeholder: "80.00" %>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="field">
+        <label class="label"><%= form.label :height  %></label>
+        <div class="control">
+          <%= form.number_field :height , class: "input", placeholder: "1.80" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="columns">
+    <div class="column">
+      <div class="field">
+        <label class="label"><%= form.label :ideal_weight %></label>
+        <div class="control">
+          <%= form.number_field :ideal_weight, class: "input", placeholder: "60.00" %>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+    </div>
+  </div>
+
+  <div class="field is-grouped is-grouped-right">
+    <p class="control">
+      <%= link_to :back, class: 'button is-danger' do %>
+        Voltar
+      <% end %>
+    </p>
+    <p class="control">
+      <%= form.submit 'Enviar' , class: "button is-success" %>
+    </p>
+    
+  </div>
+  
+<% end %>
