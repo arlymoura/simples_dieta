@@ -5,7 +5,7 @@
         <%= form.hidden_field :_destroy %>
         <div class="field is-grouped is-grouped-right">
           <small>
-            <%= link_to "Remove", "#", class: 'button is-danger is-small  is-rounded', data: { action: "click->nested-form#remove_association" } %>
+            <%= link_to "Remover", "#", class: 'button is-danger is-small  is-rounded', data: { action: "click->nested-form#remove_association" } %>
           </small>
         </div>
         <div class="columns">
@@ -13,7 +13,11 @@
             <div class="field">
               <label class="label"><%= form.label :kind %></label>
               <div class="control">
-                <%= form.text_field :kind, class: "input", placeholder: "Tipo" %>
+                <div class="select select is-fullwidth">
+                <%= form.select :kind, DietaryKind.to_a,
+								{:selected => form.object.kind, :include_blank => false},
+								{class: "select is-fullwidth"} %>
+                </div>
               </div>
             </div>
           </div>
