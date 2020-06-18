@@ -1,0 +1,13 @@
+<!-- BEGIN: SideNav-->
+<aside class="menu is-hidden-mobile mt-6">
+  <p class="menu-label title">
+      <%= current_user.email %>
+  </p>
+  <ul class="menu-list">
+    <li><a class="menuitem-space-b <%= current_class?(dietaries_path) %>" href="<%= dietaries_path %>">Minhas Dietas</a></li>
+    <li><%= link_to destroy_user_session_path, method: :delete, class: "menuitem-space-b button is-danger is-light" do %>
+     Sair <% end %></li>
+  </ul>
+</aside>
+<!-- END: SideNav-->
+

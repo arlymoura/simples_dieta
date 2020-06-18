@@ -1,0 +1,16 @@
+<% if obj.errors.any? %>
+  <div id="error_explanation">
+    <div class="col s12 m12 l12">
+      <% obj.errors.full_messages.each do |message| %>
+        <div class="card-alert card red">
+            <div class="card-content white-text">
+                <p><%= message %></p>
+            </div>
+            <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+          </div>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

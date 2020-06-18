@@ -1,0 +1,51 @@
+// Place all the styles related to the Activity controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+th {text-align:center!important;}
+td {text-align:center!important;}
+
+.login-bg {
+  background: url(https://thumbs.dreamstime.com/b/beira-de-legumes-frescos-no-fundo-de-madeira-branco-com-espa%C3%A7o-da-c%C3%B3pia-88057456.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-size: 100% auto
+}
+.menu-content {
+  margin: 0;
+  padding: 0;
+  min-height: 95vh;
+  height: auto;
+  background-color: #fafafa;
+}
+
+.menuitem-space-b{
+  margin-bottom: 10px;
+}
+
+.menu-list-active {
+  background-color: #3abb67;
+  color: #fff !important;
+}
+
+.menu-list-inactive {
+
+  background-color: #3273dc;
+  color: #fff !important;
+  padding: 10px;
+}
+.menu-list-inactive:hover {
+  background-color: #60ea90;
+  color: #fff !important;
+}
+
+.conteiner {
+  margin: 20px 0 0 20px;
+  min-width: 97%;
+}
+
+.spact_buttom_top {
+  margin-top: 10px;
+}

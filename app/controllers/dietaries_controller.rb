@@ -3,7 +3,7 @@ class DietariesController < ApplicationController
 
   # GET /dietaries
   def index
-    @dietaries = Dietary.all
+    @dietaries = current_user.dietaries
   end
 
   # GET /dietaries/1
