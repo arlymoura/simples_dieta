@@ -1,0 +1,10 @@
+---
+pt-BR:
+  enumerations:
+    dietary_kind:
+      breakfast: "Café da Manhã"
+      morning_snack: "Lanche da Manhã"
+      lunch: "Almoço"
+      afternoon_snack: "Lanche da Tarde"
+      dinner: "Janta"
+      supper: "Ceia"

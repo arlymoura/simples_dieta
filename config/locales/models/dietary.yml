@@ -1,0 +1,15 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      dietary:
+        one: Dieta
+        other: Dietas
+    attributes:
+      dietary:
+        start_date: Data Incial
+        end_date: Data Final
+        weight: Peso
+        height: Altura
+        ideal_weight: Peso Ideal
+        
