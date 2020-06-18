@@ -59,7 +59,10 @@ class DietariesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def dietary_params
-      params.require(:dietary).permit(:start_date, :end_date )
-              .merge(user_id: current_user.id)
+      params.require(:dietary).permit(:start_date, :end_date, :ideal_weight,
+                                      :height, :weight, meals_attributes: [
+                                      :_destroy, :id, :description, :hour, :kind
+                                      ] )
+                              .merge(user_id: current_user.id)
     end
 end

@@ -1,0 +1,42 @@
+<div class="card card scrollspy" style="margin-top: 5%;">
+  <div class="card-content">
+    <div class='nested-fields'>
+      <div class='form-group'>
+        <%= form.hidden_field :_destroy %>
+        <div class="field is-grouped is-grouped-right">
+          <small>
+            <%= link_to "Remove", "#", class: 'button is-danger is-small  is-rounded', data: { action: "click->nested-form#remove_association" } %>
+          </small>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label class="label"><%= form.label :kind %></label>
+              <div class="control">
+                <%= form.text_field :kind, class: "input", placeholder: "Tipo" %>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <label class="label"><%= form.label :hour  %></label>
+              <div class="control">
+                <%= form.time_field :hour , class: "input", placeholder: "1.80" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label class="label"><%= form.label :description %></label>
+              <div class="control">
+                <%= form.text_area :description, class: "textarea", placeholder: "Descrição" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
