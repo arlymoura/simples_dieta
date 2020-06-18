@@ -67,3 +67,4 @@ gem "bulma-rails", "~> 0.8.2"
 gem 'rails-i18n'
 gem 'devise'
 gem 'devise-i18n'
+gem 'enumerate_it'
