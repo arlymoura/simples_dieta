@@ -9,4 +9,9 @@ RSpec.describe Dietary, type: :model do
     it { is_expected.to validate_presence_of(:start_date) }
     it { is_expected.to validate_presence_of(:end_date) }
   end
+
+  context 'associations' do
+    it { is_expected.to belong_to(:user) }
+    it { should have_many(:meals) }
+  end
 end
