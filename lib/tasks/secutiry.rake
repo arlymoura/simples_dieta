@@ -1,8 +1,8 @@
 namespace :security do
   desc 'Rails Best Practices'
   task :rbp => :environment do
-    path = File.expand_path('../..', __dir__)
-    sh "rails_best_practices #{path}"
+    #path = File.expand_path('../..', __dir__)
+    #sh "rails_best_practices #{path}"
   end
 
   desc 'Static analysis vulnerability scanner'

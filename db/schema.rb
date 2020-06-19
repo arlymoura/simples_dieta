@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_17_010228) do
+ActiveRecord::Schema.define(version: 2020_06_18_015624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 2020_06_17_010228) do
     t.index ["user_id"], name: "index_dietaries_on_user_id"
   end
 
+  create_table "meals", force: :cascade do |t|
+    t.bigint "dietary_id", null: false
+    t.string "description"
+    t.string "kind"
+    t.time "hour"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["dietary_id"], name: "index_meals_on_dietary_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -40,4 +50,5 @@ ActiveRecord::Schema.define(version: 2020_06_17_010228) do
   end
 
   add_foreign_key "dietaries", "users"
+  add_foreign_key "meals", "dietaries"
 end

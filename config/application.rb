@@ -25,9 +25,10 @@ module Diet
     config.load_defaults 6.0
 
     config.time_zone = 'America/Fortaleza'
-    config.active_record.default_timezone = :local
+    config.active_record.default_timezone = :utc
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.i18n.default_locale = :'pt-BR'
+    Groupdate.time_zone = "UTC"
 
     # Don't generate system test files.
     config.generators.system_tests = nil

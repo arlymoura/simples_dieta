@@ -1,2 +1,1 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<%= column_chart current_user.dietaries.group_by_month(:created_at, format: "%d/%m/%Y").sum(:weight) %>
