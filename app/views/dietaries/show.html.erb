@@ -1,10 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div class="field is-grouped is-grouped-right " style="margin-top: 10px;">
+  <p class="control">
+    <%= link_to dietary_path(@dietary, format: :pdf), target: :_blank, 
+    class: 'button is-success' do %>
+    DOWNLOAD PDF
+    <% end %>
+  </p>
+</div>
 
-<%= link_to 'Edit', edit_dietary_path(@dietary) %> |
-<%= link_to 'Back', dietaries_path %>
+<h1 class="title">Dados Gerais</h1>
 
 <div class="card card card-default scrollspy">
-  <h1 class="subtitle">Dados Gerais</h1>
   <div class="card-content">
     <div class="columns">
       <div class="column">

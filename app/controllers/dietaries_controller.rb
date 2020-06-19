@@ -8,6 +8,19 @@ class DietariesController < ApplicationController
 
   # GET /dietaries/1
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+          render pdf: "Dieta. #{@dietary.id}",
+          page_size: 'A4',
+          template: "dietaries/show.html.erb",
+          layout: "pdf.html",
+          orientation: "Landscape",
+          lowquality: true,
+          zoom: 1,
+          dpi: 75
+      end
+    end
   end
 
   # GET /dietaries/new

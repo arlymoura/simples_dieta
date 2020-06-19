@@ -70,3 +70,7 @@ gem 'devise-i18n'
 gem 'enumerate_it'
 gem "chartkick"
 gem 'groupdate'
+
+#
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
