@@ -1,0 +1,38 @@
+<div class="card card scrollspy" style="margin-top: 5%;">
+  <div class="card-content">
+    <div class='nested-fields'>
+      <div class='form-group'>
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label class="label">Tipo</label>
+              <div class="control">
+                <div class="select select is-fullwidth">
+                  <%= I18n.t :"enumerations.dietary_kind.#{meal.kind}"  %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <label class="label">Horário</label>
+              <div class="control">
+                <%= meal.hour.strftime("%H:%M") %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label class="label">Descrição</label>
+              <div class="control">
+                <%= meal.description %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

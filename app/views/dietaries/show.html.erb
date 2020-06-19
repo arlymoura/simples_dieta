@@ -2,3 +2,66 @@
 
 <%= link_to 'Edit', edit_dietary_path(@dietary) %> |
 <%= link_to 'Back', dietaries_path %>
+
+<div class="card card card-default scrollspy">
+  <h1 class="subtitle">Dados Gerais</h1>
+  <div class="card-content">
+    <div class="columns">
+      <div class="column">
+        <div class="field">
+          <label class="label">Data Inicio</label>
+          <div class="control">
+            <%= l @dietary.start_date, format: :short %>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="field">
+          <label class="label">Data Final</label>
+          <div class="control">
+            <%= l @dietary.end_date, format: :short %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <div class="field">
+          <label class="label">Peso(quilos)</label>
+          <div class="control">
+            <%= @dietary.weight %> kg
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="field">
+          <label class="label">Altura(cm)</label>
+          <div class="control">
+            <%= @dietary.height %> cm
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <div class="field">
+          <label class="label">Peso Ideal(quilos)</label>
+          <div class="control">
+            <%= @dietary.ideal_weight%> kg
+          </div>
+        </div>
+      </div>
+      <div class="column">
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="title"  style="margin-top: 20px;">Refeições</h2>
+<div data-controller="nested-form">
+  <% @dietary.meals.each do |meal| %>
+    <%= render 'show_meal_fields', meal: meal %>
+  <% end %>
+</div>

@@ -9,7 +9,7 @@ pt-BR:
       dietary:
         start_date: Data Incial
         end_date: Data Final
-        weight: Peso
-        height: Altura
-        ideal_weight: Peso Ideal
+        weight: Peso(kg)
+        height: Altura(cm)
+        ideal_weight: Peso Ideal(kg)
         
