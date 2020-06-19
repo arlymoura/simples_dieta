@@ -68,3 +68,5 @@ gem 'rails-i18n'
 gem 'devise'
 gem 'devise-i18n'
 gem 'enumerate_it'
+gem "chartkick"
+gem 'groupdate'
