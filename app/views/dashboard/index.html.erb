@@ -1,1 +1,4 @@
-<%= column_chart current_user.dietaries.group_by_month(:created_at, format: "%d/%m/%Y").sum(:weight) %>
+<div>
+  <h2 class="title">Demonstrativo de Evolução</h2>
+  <%= line_chart current_user.dietaries.group_by_month(:created_at, format: "%d/%m").sum(:weight) %>  
+</div>
