@@ -1,12 +1,13 @@
 # Simples Dieta
-Aplicativo Ruby on Rails que gera as dietas de uma pessoa e gera um grafico de acompanhamento. Cada pessoa só poderá ver suas dietas. 
+Aplicação feita em Ruby on Rails que gera as dietas e um acompanhamento gráfico da evolução do peso de um usuário. Cada usuário só poderá ver suas dietas. 
 
 ## Solution
 
-Para resolver a tarefa, foi utilizado a gem "devise" para controlar a autencicação dos usuários. ao ser autenticado o usuário se depara com uma tela onde ele vai fazer o cadastro de suas respectivas dietas.
-Dentro do cadastro/edição de dieta, foi incluido a parte das refeições.
-para o cadastro/remoção de refeições ficar dinamico foi utilizado "Stimulus Js", uma gem onde faz o controle de adição e remoção das refeições(Utilizando um controller JS para isso).
-A parte do dashboard foi utilizado a gem "chartkick" para auxiliar na criação dos graficos.
+Para resolver a tarefa, foi utilizado a gem "devise" para fazer a autenticação dos usuários. Quando um usuário faz sua autenticação existe uma tela para fazer o cadastro de suas dietas. 
+
+Dentro do cadastro/edição de dieta, foi incluído a inclusão das refeições. Para este cadastro de refeições ser dinâmico, foi utilizado o "Stimulus Js", um framework Javascript.
+
+A parte do dashboard foi feito utilizando a gem "chartkick" para auxiliar na criação dos gráficos.
 
 ## Notes
 Testei modelos
@@ -32,8 +33,9 @@ Você pode acessar em http: //localhost:3000/
 - dotenv-rails
 
 ### Testing and Validations
-- active_storage_validations
 - factory-bot-rails
+- covarege
+- breakman
 - faker
 - rspec-rails
 - database_cleaner-active_record
@@ -46,8 +48,12 @@ Você pode acessar em http: //localhost:3000/
 - Chartkick
 
 ## CreatePDF
-- 'wicked_pdf'
-- 'wkhtmltopdf-binary'
+- wicked_pdf
+- wkhtmltopdf-binary
+
+### Translate
+- I18n
+- Devise-I18n
 
 ## Running Project
 No terminal executar os comando:
